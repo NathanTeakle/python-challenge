@@ -40,3 +40,4 @@ You will be given a set of poll data called election_data.csv. The dataset is co
 
 * https://www.geeksforgeeks.org/python-collections-module/
 * https://www.geeksforgeeks.org/python-counter-objects-elements/
+* https://stackoverflow.com/questions/1945920/why-doesnt-os-path-join-work-in-this-case
