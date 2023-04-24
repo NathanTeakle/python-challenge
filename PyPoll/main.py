@@ -1,8 +1,10 @@
 import csv
+import os
 from collections import Counter
 
 # Read data from file
-with open('C:/Users/Nathan/Desktop/GitHub Repos/python-challenge/PyPoll/Resources/election_data.csv', 'r') as file:
+csvpath = os.path.join("Resources", "election_data.csv")
+with open(csvpath, 'r') as file:
     reader = csv.DictReader(file)
     data = [row for row in reader]
 
@@ -32,8 +34,10 @@ print(f'-------------------------')
 print(f'Winner: {winner}')
 print(f'-------------------------')
 
-# Export results to text file
-with open('C:/Users/Nathan/Desktop/GitHub Repos/python-challenge/PyPoll/Analysis/election_analysis.txt', 'w') as file:
+# Export the output of the terminal to a txt file in the 'Analysis' folder.
+# The \n dictates where a new line should begin in the output.
+outpath = os.path.join("Analysis", "eleciton_analysis.txt")
+with open(outpath, 'w') as file:
     file.write(f'Election Results\n')
     file.write(f'-------------------------\n')
     file.write(f'Total Votes: {total_votes}\n')
