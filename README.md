@@ -34,3 +34,9 @@ You will be given a set of poll data called election_data.csv. The dataset is co
 * The total number of votes each candidate won
 
 * The winner of the election based on popular vote
+
+
+### Resources
+
+* https://www.geeksforgeeks.org/python-collections-module/
+* https://www.geeksforgeeks.org/python-counter-objects-elements/
