@@ -2,8 +2,9 @@ import csv
 import os
 
 # Provide the source CSV file and read the data.
-# I could not get the other pahting method to work.
-with open('C:/Users/Nathan/Desktop/GitHub Repos/python-challenge/PyBank/Resources/budget_data.csv', 'r') as file:
+# Updated, I got the os path method to finally work!!!!
+csvpath = os.path.join("Resources", "budget_data.csv")
+with open(csvpath, 'r') as file:
     reader = csv.DictReader(file)
     data = [row for row in reader]
 
@@ -35,8 +36,9 @@ print(f'Greatest Increase in Profits: {greatest_increase_date} (${greatest_incre
 print(f'Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease})')
 
 # Export the output of the terminal to a txt file in the 'Analysis' folder.
-# THe \n dictates where a new line should begin in the output.
-with open('C:/Users/Nathan/Desktop/GitHub Repos/python-challenge/PyBank/Analysis/budget_analysis.txt', 'w') as file:
+# The \n dictates where a new line should begin in the output.
+outpath =  os.path.join("Analysis", "budget_analysis.txt")
+with open(outpath, 'w') as file:
     file.write(f'Total Months: {total_months}\n')
     file.write(f'Total: ${net_total_PL}\n')
     file.write(f'Average Change: ${average_change_PL:.2f}\n')
